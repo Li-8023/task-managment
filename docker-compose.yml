@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  task-service:
+    build:
+      context: ./task service/task-service
+    ports:
+      - "5002:5002"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://database:3306/task_service
+      SPRING_DATASOURCE_USERNAME: springstudent
+      SPRING_DATASOURCE_PASSWORD: springstudent
+    depends_on:
+      - database
+
+  task-user-service:
+    build:
+      context: ./task user service/task-user-service
+    ports:
+      - "5001:5001"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://database:3306/task_user_service
+      SPRING_DATASOURCE_USERNAME: springstudent
+      SPRING_DATASOURCE_PASSWORD: springstudent
+    depends_on:
+      - database
+
+  database:
+    image: mysql:8.0.36
+    environment:
+      MYSQL_ROOT_PASSWORD: Hl011028
+      MYSQL_DATABASE: task_service
+      MYSQL_USER: springstudent
+      MYSQL_PASSWORD: springstudent
+    ports:
+      - "3306:3306"
+
+networks:
+  default:
+    name: microservice-network
