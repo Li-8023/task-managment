@@ -1,5 +1,9 @@
 package com.li.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +12,9 @@ import java.util.List;
  * @author: li he
  **/
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class TaskDto {
     private Long id;
 
