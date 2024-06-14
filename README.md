@@ -6,6 +6,6 @@
 * React
 * Redux toolkit
 * tailwind css
-* mui
+* MUI
 * Netfix eureka client
 * OpenFeign
