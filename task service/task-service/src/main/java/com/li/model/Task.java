@@ -31,6 +31,7 @@ public class Task {
 
     private Long assignedUserId;
 
+    @ElementCollection
     private List<String> tags = new ArrayList<>();
 
     private TaskStatus status;
