@@ -2,10 +2,10 @@
 
 ## Technology
 * Spring Boot
-* MySQL
+* PostgreSQL
 * React
 * Redux toolkit
 * tailwind css
-* mui
-* etfix eureka client
+* MUI
+* Netfix eureka client
 * OpenFeign
